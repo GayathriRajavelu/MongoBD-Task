@@ -1,0 +1,471 @@
+use ddemo
+switched to db ddemo
+db.mentors.insertMany([
+{name:"Gayu",email:"gayu@gmail.com"},
+  {name:"rupan",email:"rupan@gmail.com"},
+  {name:"joe",email:"joe@gmail.com"}
+  
+]);
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69490a4b46fa4de1f2acaa03'),
+    '1': ObjectId('69490a4b46fa4de1f2acaa04'),
+    '2': ObjectId('69490a4b46fa4de1f2acaa05')
+
+  }
+}
+
+
+db.users.insertMany([
+  {name:"priya",email:"priya@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:150},
+  {name:"test",email:"test@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa04'),codekata_score:250},
+  {name:"tom",email:"tom@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa05'),codekata_score:180}
+]);
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69490b8b46fa4de1f2acaa06'),
+    '1': ObjectId('69490b8b46fa4de1f2acaa07'),
+    '2': ObjectId('69490b8b46fa4de1f2acaa08')
+  }
+}
+
+db.attendance.insertMany([
+  {user_id:ObjectId('69490b8b46fa4de1f2acaa06'),date:ISODate("2020-10-15"),status:"present"},
+  {user_id:ObjectId('69490b8b46fa4de1f2acaa07'),date:ISODate("2020-10-22"),status:"absent"},
+  {user_id:ObjectId('69490b8b46fa4de1f2acaa08'),date:ISODate("2020-10-28"),status:"present"}
+  ]);
+
+
+  {
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69490d5e46fa4de1f2acaa09'),
+    '1': ObjectId('69490d5e46fa4de1f2acaa0a'),
+    '2': ObjectId('69490d5e46fa4de1f2acaa0b')
+  }
+}
+
+db.topics.insertMany([
+  {title:"html",date:ISODate("2020-10-21")},
+  {title:"javascript",date:ISODate("2020-10-27")},
+  {title:"css",date:ISODate("2020-10-25")}
+]);
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69490e5246fa4de1f2acaa0c'),
+    '1': ObjectId('69490e5246fa4de1f2acaa0d'),
+    '2': ObjectId('69490e5246fa4de1f2acaa0e')
+  }
+}
+
+
+db.tasks.insertMany([
+  {topics_id:ObjectId('69490e5246fa4de1f2acaa0c'),task:"html task",due_date:ISODate("2020-10-23"),submitted_by:ObjectId('69490b8b46fa4de1f2acaa06')},
+  {topics_id:ObjectId('69490e5246fa4de1f2acaa0d'),task:"javascript task",due_date:ISODate("2020-10-26"),submitted_by:ObjectId('69490b8b46fa4de1f2acaa07')},
+  {topics_id:ObjectId('69490e5246fa4de1f2acaa0e'),task:"css task",due_date:ISODate("2020-10-18"),submitted_by:ObjectId('69490b8b46fa4de1f2acaa08')}
+]);
+
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('694910bb46fa4de1f2acaa0f'),
+    '1': ObjectId('694910bb46fa4de1f2acaa10'),
+    '2': ObjectId('694910bb46fa4de1f2acaa11')
+  }
+}
+
+db.company.insertMany([
+  {name:"google",date:ISODate("2020-10-16"),attended_persons:[ObjectId('69490b8b46fa4de1f2acaa06'),ObjectId('69490b8b46fa4de1f2acaa07')]},
+  {name:"TCS",date:ISODate("2020-10-25"),attended_persons:[ObjectId('69490b8b46fa4de1f2acaa07'),ObjectId('69490b8b46fa4de1f2acaa08')]}
+]);
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69491f6d910c1881c0afdac2'),
+    '1': ObjectId('69491f6d910c1881c0afdac3')
+  }
+}
+
+db.codekata.insertMany([
+  {user_id:ObjectId('69490b8b46fa4de1f2acaa06'),date:ISODate("2020-10-18"),solved:50},
+  {user_id:ObjectId('69490b8b46fa4de1f2acaa07'),date:ISODate("2020-10-21"),solved:80},
+  {user_id:ObjectId('69490b8b46fa4de1f2acaa08'),date:ISODate("2020-10-28"),solved:150}
+]);
+
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6949133646fa4de1f2acaa14'),
+    '1': ObjectId('6949133646fa4de1f2acaa15'),
+    '2': ObjectId('6949133646fa4de1f2acaa16')
+  }
+}
+
+db.users.insertMany([
+  {name:"abc",email:"abc@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:230},
+  {name:"dec",email:"dec@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:250},
+  {name:"fd",email:"fd@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:180},
+  {name:"hari",email:"hari@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:150},
+  {name:"sudha",email:"sudha@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:250},
+  {name:"kavi",email:"kavi@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:180},
+ 
+  {name:"aadhi",email:"aadhi@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:150},
+  {name:"test",email:"test@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:250},
+  {name:"tom",email:"tom@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:180},
+
+
+  {name:"giri",email:"giri@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:150},
+  {name:"abi",email:"abi@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:250},
+  {name:"aswath",email:"aswath@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:180},
+
+  {name:"oviya",email:"oviya@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:150},
+  {name:"magi",email:"magi@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:250},
+  {name:"babu",email:"babu@gmail.com",mentor_id:ObjectId('69490a4b46fa4de1f2acaa03'),codekata_score:180},
+
+
+]);
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69492750910c1881c0afdac5'),
+    '1': ObjectId('69492750910c1881c0afdac6'),
+    '2': ObjectId('69492750910c1881c0afdac7'),
+    '3': ObjectId('69492750910c1881c0afdac8'),
+    '4': ObjectId('69492750910c1881c0afdac9'),
+    '5': ObjectId('69492750910c1881c0afdaca'),
+    '6': ObjectId('69492750910c1881c0afdacb'),
+    '7': ObjectId('69492750910c1881c0afdacc'),
+    '8': ObjectId('69492750910c1881c0afdacd'),
+    '9': ObjectId('69492750910c1881c0afdace'),
+    '10': ObjectId('69492750910c1881c0afdacf'),
+    '11': ObjectId('69492750910c1881c0afdad0'),
+    '12': ObjectId('69492750910c1881c0afdad1'),
+    '13': ObjectId('69492750910c1881c0afdad2'),
+    '14': ObjectId('69492750910c1881c0afdad3')
+  }
+}
+
+
+
+
+Question:1 :-
+
+Find all the topics and tasks which are thought in the month of October
+
+Answer:-
+
+db.tasks.aggregate([
+  {
+    $lookup: {
+      from: "topics",
+      localField: "topics_id",
+      foreignField: "_id",
+      as: "topic"
+    }
+  },
+  { $unwind: "$topic" },
+  {
+    $match: {
+      "topic.date": {
+        $gte: ISODate("2020-10-01"),
+        $lte: ISODate("2020-10-31")
+      }
+    }
+  }
+])
+
+Output:-
+
+{
+  _id: ObjectId('694910bb46fa4de1f2acaa0f'),
+  topics_id: ObjectId('69490e5246fa4de1f2acaa0c'),
+  task: 'html task',
+  due_date: 2020-10-23T00:00:00.000Z,
+  submitted_by: ObjectId('69490b8b46fa4de1f2acaa06'),
+  topic: {
+    _id: ObjectId('69490e5246fa4de1f2acaa0c'),
+    title: 'html',
+    date: 2020-10-21T00:00:00.000Z
+  }
+}
+
+{
+  _id: ObjectId('694910bb46fa4de1f2acaa10'),
+  topics_id: ObjectId('69490e5246fa4de1f2acaa0d'),
+  task: 'javascript task',
+  due_date: 2020-10-26T00:00:00.000Z,
+  submitted_by: ObjectId('69490b8b46fa4de1f2acaa07'),
+  topic: {
+    _id: ObjectId('69490e5246fa4de1f2acaa0d'),
+    title: 'javascript',
+    date: 2020-10-27T00:00:00.000Z
+  }
+}
+
+{
+  _id: ObjectId('694910bb46fa4de1f2acaa10'),
+  topics_id: ObjectId('69490e5246fa4de1f2acaa0d'),
+  task: 'javascript task',
+  due_date: 2020-10-26T00:00:00.000Z,
+  submitted_by: ObjectId('69490b8b46fa4de1f2acaa07'),
+  topic: {
+    _id: ObjectId('69490e5246fa4de1f2acaa0d'),
+    title: 'javascript',
+    date: 2020-10-27T00:00:00.000Z
+  }
+}
+
+
+
+Question: 2:-
+
+Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+Answer:-
+
+db.company.find({
+  date: {
+    $gte: ISODate("2020-10-15"),
+    $lte: ISODate("2020-10-31")
+  }
+});
+
+
+Output:-
+
+{
+  _id: ObjectId('6949121846fa4de1f2acaa12'),
+  name: 'google',
+  date: 2020-10-16T00:00:00.000Z,
+  attended_persons: [
+    ObjectId('69490b8b46fa4de1f2acaa06'),
+    ObjectId('69490b8b46fa4de1f2acaa07')
+  ]
+}
+
+{
+  _id: ObjectId('6949121846fa4de1f2acaa13'),
+  name: 'TCS',
+  date: 2020-10-25T00:00:00.000Z,
+  attened_persons: [
+    ObjectId('69490b8b46fa4de1f2acaa07'),
+    ObjectId('69490b8b46fa4de1f2acaa08')
+  ]
+}
+
+
+
+Question: 3:-
+
+Find all the company drives and students who are appeared for the placement.
+
+Answer:-
+
+db.company.aggregate([
+  {
+    $lookup: {
+      from: "users",
+      localField: "attended_persons",
+      foreignField: "_id",
+      as: "students"
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      company_name: "$name",
+      drive_date: "$date",
+      students: {
+        $map: {
+          input: "$students",
+          as: "stu",
+          in: {
+            name: "$$stu.name",
+            email: "$$stu.email"
+          }
+        }
+      }
+    }
+  }
+]);
+
+Output:-
+
+{
+  company_name: 'google',
+  drive_date: 2020-10-16T00:00:00.000Z,
+  students: [
+    {
+      name: 'priya',
+      email: 'priya@gmail.com'
+    },
+    {
+      name: 'test',
+      email: 'test@gmail.com'
+    }
+  ]
+}
+{
+  company_name: 'TCS',
+  drive_date: 2020-10-25T00:00:00.000Z,
+  students: [
+    {
+      name: 'test',
+      email: 'test@gmail.com'
+    },
+    {
+      name: 'tom',
+      email: 'tom@gmail.com'
+    }
+  ]
+}
+
+
+
+Question: 4:-
+
+Find the number of problems solved by the user in codekata
+
+Answer:-
+
+db.codekata.aggregate([
+  {
+    $group: {
+      _id: "$user_id",
+      total_problems_solved: { $sum: "$solved" }
+    }
+  },
+  {
+    $lookup: {
+      from: "users",
+      localField: "_id",
+      foreignField: "_id",
+      as: "user"
+    }
+  },
+  { $unwind: "$user" },
+  {
+    $project: {
+      _id: 0,
+      user_name: "$user.name",
+      total_problems_solved: 1
+    }
+  }
+]);
+
+Output:-
+
+{
+  total_problems_solved: 150,
+  user_name: 'tom'
+}
+{
+  total_problems_solved: 50,
+  user_name: 'priya'
+}
+{
+  total_problems_solved: 80,
+  user_name: 'test'
+}
+
+
+Question: 5:-
+Find all the mentors with who has the mentee's count more than 15
+
+Answer:-
+db.users.aggregate([
+  {
+    $group: {
+      _id: "$mentor_id",
+      mentee_count: { $sum: 1 }
+    }
+  },
+  {
+    $match: {
+      mentee_count: { $gt: 15 }
+    }
+  },
+  {
+    $lookup: {
+      from: "mentors",
+      localField: "_id",
+      foreignField: "_id",
+      as: "mentor"
+    }
+  },
+  { $unwind: "$mentor" },
+  {
+    $project: {
+      _id: 0,
+      mentor_name: "$mentor.name",
+      mentee_count: 1
+    }
+  }
+]);
+
+Output:-
+
+{
+  mentee_count: 16,
+  mentor_name: 'Gayu'
+}
+
+Question: 6:-
+
+Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+Answer:-
+db.attendance.aggregate([
+  {
+    $match: {
+      status: "absent",
+      date: {
+        $gte: ISODate("2020-10-15"),
+        $lte: ISODate("2020-10-31")
+      }
+    }
+  },
+  {
+    $lookup: {
+      from: "tasks",
+      localField: "user_id",
+      foreignField: "submitted_by",
+      as: "submitted_tasks"
+    }
+  },
+  { $match: { submitted_tasks: { $size: 0 } } },
+  {
+    $lookup: {
+      from: "users",
+      localField: "user_id",
+      foreignField: "_id",
+      as: "user"
+    }
+  },
+  { $unwind: "$user" },
+  {
+    $project: {
+      _id: 0,
+      user_name: "$user.name",
+      email: "$user.email",
+      absent_date: "$date"
+    }
+  }
+]);
+
+
+
+
+
+
+
